@@ -5,7 +5,15 @@
   "description": "This extension is used to reveal some hidden features of TiDB Cloud Admin",
   "content_scripts": [
     {
-      "js": ["scripts/content.js"],
+      "css": [
+        "lib/popover.css",
+        "scripts/content.css"
+      ],
+      "js": [
+        "lib/jquery-3.7.0.slim.min.js",
+        "lib/popover.js",
+        "scripts/content.js"
+      ],
       "matches": ["https://tidbcloud.com/*"]
     }
   ],

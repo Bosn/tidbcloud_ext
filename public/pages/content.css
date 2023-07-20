@@ -7,3 +7,12 @@
   font-size: 11px;
   color: #333;
 }
+
+.__ext_tooltip .__ext_tooltip_icon {
+  width: 13px;
+  height: 13px;
+  margin-left: 4px;
+  cursor: pointer;
+  position: relative;
+  top: 3px;
+}

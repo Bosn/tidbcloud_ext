@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "TiDBCloudAdmin",
+  "name": "TiDB Cloud Admin",
   "version": "0.1",
   "description": "This extension is used to reveal some hidden features of TiDB Cloud Admin",
   "content_scripts": [
@@ -27,8 +27,14 @@
     }
   },
   "permissions": [
+    "clipboardWrite",
     "activeTab",
-    "scripting"
+    "tabs",
+    "scripting",
+    "storage"
+ ],
+ "host_permissions": [
+  "https://dev.tidbcloud.com/*"
  ],
  "background": {
     "service_worker": "scripts/background.js"

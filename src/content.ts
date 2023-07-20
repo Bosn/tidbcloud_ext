@@ -1,5 +1,9 @@
-setTimeout(() => {
+
+function bindEventsToElementsWithMpEvent() {
   $('*[data-mp-event]').each((_, el) => {
+    if ($(el).data('__done')) {
+      return
+    }
     const eventName = $(el).data('mp-event')
     const content = `
         <div class="__ext_tooltip">
@@ -19,8 +23,13 @@ setTimeout(() => {
       content,
       trigger: 'hover',
     })
+    $(el).data('__done', true)
   })
-}, 5000)
+}
+
+setInterval(() => {
+  bindEventsToElementsWithMpEvent()
+}, 1000)
 
 
 export default {}

@@ -14,7 +14,11 @@
         "lib/popover.js",
         "scripts/content.js"
       ],
-      "matches": ["https://dev.tidbcloud.com/*"]
+      "matches": [
+        "https://dev.tidbcloud.com/*",
+        "https://tidbcloud.com/*",
+        "https://*.tidbcloud.com/*"
+      ]
     }
   ],
   "action": {
@@ -32,17 +36,25 @@
     "tabs",
     "scripting",
     "storage"
- ],
- "host_permissions": [
-  "https://dev.tidbcloud.com/*"
- ],
- "background": {
+  ],
+  "host_permissions": [
+    "https://dev.tidbcloud.com/*",
+    "https://tidbcloud.com/*",
+    "https://*.tidbcloud.com/*"
+  ],
+  "background": {
     "service_worker": "scripts/background.js"
- },
+  },
   "web_accessible_resources": [
     {
-      "resources": [ "images/*.png" ],
-      "matches": [ "https://dev.tidbcloud.com/*" ]
+      "resources": [
+        "images/*.png"
+      ],
+      "matches": [
+        "https://dev.tidbcloud.com/*",
+        "https://tidbcloud.com/*",
+        "https://*.tidbcloud.com/*"
+      ]
     }
   ]
 }
